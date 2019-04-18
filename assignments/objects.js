@@ -103,11 +103,13 @@ const parent = {
   child: {
     name: 'George',
     age: 50, 
+    speak: function() { return `My name is ${this.name}!`},
     grandchild: {
       name: 'Sam',
       age: 30,
-    }
-  } 
+      speak: function() { return `My name is ${this.name}!`},
+    },
+  }, 
  } 
 
  parent_grp = Object.assign(parent, child);
@@ -119,9 +121,13 @@ console.log(parent.name);
 console.log(parent.child.age);
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandchild);
 
 // Have the parent speak
+console.log(parent.speak());
 
 // Have the child speak
+console.log(parent.child.speak());
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
