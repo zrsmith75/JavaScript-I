@@ -112,7 +112,7 @@ const parent = {
   }, 
  } 
 
- parent_grp = Object.assign(parent, child);
+//  parent_grp = Object.assign(parent, child);
 
 // Log the parent object's name
 console.log(parent.name);
